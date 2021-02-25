@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-    <link ref="stylesheet" href="style.css"/>
-</head>
-<body>
-   <script src="script.js"></script> 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/dfb79fe1c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="city degree" id="city-degrees">
+        <input
+          type="type"
+          id="changeCity"
+          placeholder="change city"
+          autocomplete="off"
+        />
+        <input type="submit" value="change city" />
+        <button>
+          Current Location
+        </button>
+      </form>
+
+      <div class="city-box">
+        <h1 id= city>
+          Vancouver
+        </h1>
+        <p id="real-time">
+          Sat, Jan 31 3:20pm
+        </p>
+      </div>
+      <div class="temp-box">
+        <h2><i class="fas fa-cloud-showers-heavy"></i> <h2 id="localTemp">1ºC</h2></h2>
+        <p>
+          Heavy Showers
+        </p>
+        <p>
+          5℃ / 1℃ | Real Feel 3℃
+        </p>
+      </div>
+      <div class="row">
+        <div class="col forecast">
+          Forecast
+        </div>
+      </div>
+      <div class="border">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sun</h5>
+                <p class="card-text">4 / 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Mon</h5>
+                <p class="card-text">5 / -1</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tue</h5>
+                <p class="card-text">6 / 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wed</h5>
+                <p class="card-text">5 / 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Thurs</h5>
+                <p class="card-text">5 / 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Fri</h5>
+                <p class="card-text">4 / 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sat</h5>
+                <p class="card-text">3 / -2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
